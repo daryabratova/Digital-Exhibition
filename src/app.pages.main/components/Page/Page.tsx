@@ -1,11 +1,19 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { artists, creators } from '../../../data';
+import arrow from '../../../assets/icons/arrow.svg';
+
 import * as Styles from './Page.styles';
 
-export default function Home() {
+const Home: React.FC = () => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div>
       <Head>
@@ -14,11 +22,88 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Styles.GlobalStyle />
+      <header>
+        {menuIsOpen && (
+          <>
+            <Styles.Menu>
+              <Styles.MenuClose onClick={() => setMenuIsOpen(false)} />
+              <Styles.MenuContent>
+                {artists.map((artist) => (
+                  <Styles.MenuArtist>{artist.name}</Styles.MenuArtist>
+                ))}
+              </Styles.MenuContent>
+              <Styles.MenuContacts href="#creators" onClick={() => setMenuIsOpen(false)} />
+            </Styles.Menu>
+            <Styles.MenuGlobalStyle />
+          </>
+        )}
+        <Styles.MenuOpen onClick={() => setMenuIsOpen(true)} />
+        <Styles.TitleLayout>
+          <div>
+            <Styles.Title>Trigger</Styles.Title>
+            <Styles.Subtitle>[Make it flow]</Styles.Subtitle>
+          </div>
+        </Styles.TitleLayout>
+        <Styles.DescriptionLayout>
+          <Styles.Description>
+            Триггер (триггерная система) — класс электронных устройств, обладающих способностью
+            длительно находиться в одном из двух устойчивых состояний и чередовать их под
+            воздействием внешних сигналов. Каждое состояние триггера легко распознаётся по значению
+            выходного напряжения. По характеру действия триггеры относятся к импульсным устройствам
+            — их активные элементы (транзисторы, лампы) работают в ключевом режиме, а смена
+            состояний длится очень короткое время.
+          </Styles.Description>
+          <Styles.Description>
+            Отличительной особенностью триггера как функционального устройства является свойство
+            запоминания двоичной информации. Под памятью триггера подразумевают способность
+            оставаться в одном из двух состояний и после прекращения действия переключающего
+            сигнала. Приняв одно из состояний за «1», а другое за «0», можно считать, что триггер
+            хранит (помнит) один разряд числа, записанного в двоичном коде.
+          </Styles.Description>
+        </Styles.DescriptionLayout>
+      </header>
+
       <main>
-        <Styles.TestDasha>
-          Go to <Link href="/artists/first-artist">First Artist!</Link>
-        </Styles.TestDasha>
+        <Styles.ArtistsLayout>
+          {artists.map((artist) => {
+            return (
+              <Styles.Artist>
+                <img src={artist.artURL} alt="art" />
+                <Styles.ArtistDescription>
+                  <Link href={artist.link}>
+                    <img src={arrow} alt="arrow" />
+                  </Link>
+                  <Styles.ArtistName>{artist.name}</Styles.ArtistName>
+                </Styles.ArtistDescription>
+              </Styles.Artist>
+            );
+          })}
+        </Styles.ArtistsLayout>
       </main>
+
+      <footer>
+        <Styles.CreatorsLayout id="creators">
+          {creators.map((creator) => {
+            return (
+              <Styles.Creator>
+                <Styles.CreatorName>{creator.name}</Styles.CreatorName>
+                <Styles.CreatorJob>{creator.job}</Styles.CreatorJob>
+                <Styles.CreatorLinks>
+                  <Styles.CreatorLink>{creator.tg}</Styles.CreatorLink>
+                  <Styles.CreatorLink>{creator.in}</Styles.CreatorLink>
+                  <Styles.CreatorLink>{creator.vk}</Styles.CreatorLink>
+                </Styles.CreatorLinks>
+              </Styles.Creator>
+            );
+          })}
+          <Styles.ArrowWrapper>
+            <Styles.Arrow onClick={handleScrollToTop} />
+          </Styles.ArrowWrapper>
+        </Styles.CreatorsLayout>
+      </footer>
     </div>
   );
-}
+};
+
+export default Home;

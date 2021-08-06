@@ -2,7 +2,8 @@
   "extends": ["airbnb-typescript", "airbnb/hooks", "plugin:prettier/recommended"],
   "parserOptions": { "project": "tsconfig.json" },
   "rules": {
-    "import/prefer-default-export": "warn"
+    "import/prefer-default-export": "warn",
+    "react/jsx-props-no-spreading": "off"
   },
   "ignorePatterns": ["pages/_app.js"]
 }
