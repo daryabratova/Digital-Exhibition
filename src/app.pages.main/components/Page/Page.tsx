@@ -30,7 +30,9 @@ const Home: React.FC = () => {
               <Styles.MenuClose onClick={() => setMenuIsOpen(false)} />
               <Styles.MenuContent>
                 {artists.map((artist) => (
-                  <Styles.MenuArtist>{artist.name}</Styles.MenuArtist>
+                  <Styles.MenuArtist onClick={() => setMenuIsOpen(false)} href={`#${artist.id}`}>
+                    {artist.name}
+                  </Styles.MenuArtist>
                 ))}
               </Styles.MenuContent>
               <Styles.MenuContacts href="#creators" onClick={() => setMenuIsOpen(false)} />
@@ -68,13 +70,15 @@ const Home: React.FC = () => {
         <Styles.ArtistsLayout>
           {artists.map((artist) => {
             return (
-              <Styles.Artist>
+              <Styles.Artist id={artist.id}>
                 <img src={artist.artURL} alt="art" />
                 <Styles.ArtistDescription>
-                  <Link href={artist.link}>
+                  <Link href={artist.id}>
                     <img src={arrow} alt="arrow" />
                   </Link>
-                  <Styles.ArtistName>{artist.name}</Styles.ArtistName>
+                  <Link href={artist.id}>
+                    <Styles.ArtistName>{artist.name}</Styles.ArtistName>
+                  </Link>
                 </Styles.ArtistDescription>
               </Styles.Artist>
             );

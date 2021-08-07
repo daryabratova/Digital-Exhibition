@@ -74,11 +74,12 @@ export const MenuContent = styled.div`
   margin-top: 49px;
 `;
 
-export const MenuArtist = styled.div`
+export const MenuArtist = styled.a`
   margin-bottom: 22px;
   font-size: 18px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-decoration: none;
   color: #f5f5f5;
 `;
 
@@ -127,7 +128,7 @@ export const Description = styled.p`
 `;
 
 export const ArtistsLayout = styled.div`
-  padding: 170px 15px 30px;
+  padding: 0 15px 30px;
   background-image: url(${backgroundLines});
   background-position: center;
   background-repeat: repeat-y;
@@ -137,13 +138,13 @@ export const Artist = styled.div`
   display: flex;
   justify-content: space-between;
   height: 130px;
-  margin-bottom: 210px;
+  padding-top: 170px;
   font-size: 14px;
   letter-spacing: 0.1em;
 
   &:nth-child(even) {
     flex-direction: row-reverse;
-    margin-bottom: 170px;
+    padding-top: 210px;
 
     & > div {
       align-items: flex-start;

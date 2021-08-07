@@ -4,37 +4,37 @@ const artists = [
   {
     name: 'Света Пупкина',
     artURL: ArtPlug,
-    link: '/artists/sveta-pupkina',
+    id: '/artists/sveta-pupkina',
   },
   {
     name: 'Иван Изинтернетов',
     artURL: ArtPlug,
-    link: 'pages/index.ts',
+    id: '/artists/ivan-izinternetov',
   },
   {
     name: 'Егор Наляпин',
     artURL: ArtPlug,
-    link: 'pages/index.ts',
+    id: '/artists/egor-nalyapin',
   },
   {
     name: 'Адольф Богемников',
     artURL: ArtPlug,
-    link: 'pages/index.ts',
+    id: '/artists/adolf-bogemnikov',
   },
   {
     name: 'Сэд Энд Дэд',
     artURL: ArtPlug,
-    link: 'pages/index.ts',
+    id: '/artists/sed-end-ded',
   },
   {
     name: 'Монтсерат Вензеляева',
     artURL: ArtPlug,
-    link: 'pages/index.ts',
+    id: '/artists/montserat-venzelyaeva',
   },
   {
     name: 'Петя Борщин',
     artURL: ArtPlug,
-    link: 'pages/index.ts',
+    id: 'artists/petya-borshin',
   },
 ];
 
