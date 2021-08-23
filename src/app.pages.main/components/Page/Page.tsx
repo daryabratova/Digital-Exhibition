@@ -30,7 +30,11 @@ const Home: React.FC = () => {
               <Styles.MenuClose onClick={() => setMenuIsOpen(false)} />
               <Styles.MenuContent>
                 {artists.map((artist) => (
-                  <Styles.MenuArtist onClick={() => setMenuIsOpen(false)} href={`#${artist.id}`}>
+                  <Styles.MenuArtist
+                    onClick={() => setMenuIsOpen(false)}
+                    href={`#${artist.id}`}
+                    key={artist.id}
+                  >
                     {artist.name}
                   </Styles.MenuArtist>
                 ))}
@@ -70,13 +74,16 @@ const Home: React.FC = () => {
         <Styles.ArtistsLayout>
           {artists.map((artist) => {
             return (
-              <Styles.Artist id={artist.id}>
+              <Styles.Artist id={artist.id} key={artist.id}>
                 <img src={artist.artURL} alt="art" />
                 <Styles.ArtistDescription>
                   <Link href={artist.id}>
                     <img src={arrow} alt="arrow" />
                   </Link>
-                  <Link href={artist.id}>
+                  <Link
+                    href={{ pathname: '/artists/[artistId]', query: { artistId: artist.id } }}
+                    passHref
+                  >
                     <Styles.ArtistName>{artist.name}</Styles.ArtistName>
                   </Link>
                 </Styles.ArtistDescription>
@@ -90,7 +97,7 @@ const Home: React.FC = () => {
         <Styles.CreatorsLayout id="creators">
           {creators.map((creator) => {
             return (
-              <Styles.Creator>
+              <Styles.Creator id={creator.name}>
                 <Styles.CreatorName>{creator.name}</Styles.CreatorName>
                 <Styles.CreatorJob>{creator.job}</Styles.CreatorJob>
                 <Styles.CreatorLinks>

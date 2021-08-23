@@ -4,37 +4,79 @@ const artists = [
   {
     name: 'Света Пупкина',
     artURL: ArtPlug,
-    id: '/artists/sveta-pupkina',
+    id: 'sveta-pupkina',
+    tg: '@murmurmurmur',
+    in: '@murmurmurmur',
+    vk: '@murmurmurmur',
+    title: 'Название произведения',
+    description:
+      'Коротенечко, емко, интерсно описанная суть, чтобы все понятно и увлекательно, ага.',
   },
   {
     name: 'Иван Изинтернетов',
     artURL: ArtPlug,
-    id: '/artists/ivan-izinternetov',
+    id: 'ivan-izinternetov',
+    tg: '@murmurmurmur',
+    in: '@murmurmurmur',
+    vk: '@murmurmurmur',
+    title: 'Название произведения',
+    description:
+      'Коротенечко, емко, интерсно описанная суть, чтобы все понятно и увлекательно, ага.',
   },
   {
     name: 'Егор Наляпин',
     artURL: ArtPlug,
-    id: '/artists/egor-nalyapin',
+    id: 'egor-nalyapin',
+    tg: '@murmurmurmur',
+    in: '@murmurmurmur',
+    vk: '@murmurmurmur',
+    title: 'Название произведения',
+    description:
+      'Коротенечко, емко, интерсно описанная суть, чтобы все понятно и увлекательно, ага.',
   },
   {
     name: 'Адольф Богемников',
     artURL: ArtPlug,
-    id: '/artists/adolf-bogemnikov',
+    id: 'adolf-bogemnikov',
+    tg: '@murmurmurmur',
+    in: '@murmurmurmur',
+    vk: '@murmurmurmur',
+    title: 'Название произведения',
+    description:
+      'Коротенечко, емко, интерсно описанная суть, чтобы все понятно и увлекательно, ага.',
   },
   {
     name: 'Сэд Энд Дэд',
     artURL: ArtPlug,
-    id: '/artists/sed-end-ded',
+    id: 'sed-end-ded',
+    tg: '@murmurmurmur',
+    in: '@murmurmurmur',
+    vk: '@murmurmurmur',
+    title: 'Название произведения',
+    description:
+      'Коротенечко, емко, интерсно описанная суть, чтобы все понятно и увлекательно, ага.',
   },
   {
     name: 'Монтсерат Вензеляева',
     artURL: ArtPlug,
-    id: '/artists/montserat-venzelyaeva',
+    id: 'montserat-venzelyaeva',
+    tg: '@murmurmurmur',
+    in: '@murmurmurmur',
+    vk: '@murmurmurmur',
+    title: 'Название произведения',
+    description:
+      'Коротенечко, емко, интерсно описанная суть, чтобы все понятно и увлекательно, ага.',
   },
   {
     name: 'Петя Борщин',
     artURL: ArtPlug,
-    id: 'artists/petya-borshin',
+    id: 'petya-borshin',
+    tg: '@murmurmurmur',
+    in: '@murmurmurmur',
+    vk: '@murmurmurmur',
+    title: 'Название произведения',
+    description:
+      'Коротенечко, емко, интерсно описанная суть, чтобы все понятно и увлекательно, ага.',
   },
 ];
 
