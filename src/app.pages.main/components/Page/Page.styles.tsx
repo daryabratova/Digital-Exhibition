@@ -227,20 +227,21 @@ export const CreatorLink = styled.div`
   font-weight: 400;
   background-repeat: no-repeat;
   background-position: 15px;
+  line-height: 24px;
 
   &:nth-child(1) {
     background-image: url(${tgIcon});
-    background-size: 32px 18px;
+    background-size: 39px 24px;
   }
 
   &:nth-child(2) {
     background-image: url(${inIcon});
-    background-size: 22px 17px;
+    background-size: 28px 23px;
   }
 
   &:nth-child(3) {
     background-image: url(${vkIcon});
-    background-size: 35px 17px;
+    background-size: 47px 24px;
   }
 `;
 
