@@ -149,7 +149,7 @@ export const Artist = styled.div`
     & > div {
       align-items: flex-start;
 
-      & > span {
+      & > a {
         text-align: start;
       }
 
@@ -171,7 +171,7 @@ export const ArtistDescription = styled.div`
   align-items: flex-end;
 `;
 
-export const ArtistName = styled.span`
+export const ArtistName = styled.a`
   display: inline-block;
   width: 130px;
   text-align: end;

@@ -76,17 +76,15 @@ const Home: React.FC = () => {
             return (
               <Styles.Artist id={artist.id} key={artist.id}>
                 <img src={artist.artURL} alt="art" />
-                <Styles.ArtistDescription>
-                  <Link href={artist.id}>
+                <Link
+                  href={{ pathname: '/artists/[artistId]', query: { artistId: artist.id } }}
+                  passHref
+                >
+                  <Styles.ArtistDescription>
                     <img src={arrow} alt="arrow" />
-                  </Link>
-                  <Link
-                    href={{ pathname: '/artists/[artistId]', query: { artistId: artist.id } }}
-                    passHref
-                  >
                     <Styles.ArtistName>{artist.name}</Styles.ArtistName>
-                  </Link>
-                </Styles.ArtistDescription>
+                  </Styles.ArtistDescription>
+                </Link>
               </Styles.Artist>
             );
           })}

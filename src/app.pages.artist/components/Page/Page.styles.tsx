@@ -26,7 +26,8 @@ export const Artist = styled.div`
   margin: 25px 0;
 `;
 
-export const LinkMain = styled.div`
+export const LinkMain = styled.a`
+  display: inline-block;
   width: 150px;
   height: 25px;
   background-image: url(${LinkToMenu});
