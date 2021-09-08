@@ -1,11 +1,11 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import LinkToMenu from '../../../assets/icons/arrow-menu.svg';
-import EmptyCircle from '../../../assets/icons/circle-empty.svg';
-import FilledCircle from '../../../assets/icons/circle-full.svg';
-import TgIcon from '../../../assets/icons/tg.svg';
-import InstIcon from '../../../assets/icons/in.svg';
-import VkIcon from '../../../assets/icons/vk.svg';
-import Arrow from '../../../assets/icons/arrow-up.svg';
+import LinkToMenu from '../../assets/icons/arrow-menu.svg';
+import EmptyCircle from '../../assets/icons/circle-empty.svg';
+import FilledCircle from '../../assets/icons/circle-full.svg';
+import TgIcon from '../../assets/icons/tg.svg';
+import InstIcon from '../../assets/icons/in.svg';
+import VkIcon from '../../assets/icons/vk.svg';
+import Arrow from '../../assets/icons/arrow-up.svg';
 
 export const GlobalStyle = createGlobalStyle`
   html {

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import { artists, creators } from '../../../data';
-import arrow from '../../../assets/icons/arrow.svg';
+import arrow from '../../assets/icons/arrow.svg';
 
 import * as Styles from './Page.styles';
 

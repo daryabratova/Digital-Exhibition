@@ -1,12 +1,12 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import menuOpen from '../../../assets/icons/menu-open.svg';
-import menuClose from '../../../assets/icons/menu-close.svg';
-import contacts from '../../../assets/icons/contacts.svg';
-import backgroundLines from '../../../assets/icons/background-lines.svg';
-import tgIcon from '../../../assets/icons/tg.svg';
-import inIcon from '../../../assets/icons/in.svg';
-import vkIcon from '../../../assets/icons/vk.svg';
-import arrowBytton from '../../../assets/icons/arrow-up.svg';
+import menuOpen from '../../assets/icons/menu-open.svg';
+import menuClose from '../../assets/icons/menu-close.svg';
+import contacts from '../../assets/icons/contacts.svg';
+import backgroundLines from '../../assets/icons/background-lines.svg';
+import tgIcon from '../../assets/icons/tg.svg';
+import inIcon from '../../assets/icons/in.svg';
+import vkIcon from '../../assets/icons/vk.svg';
+import arrowBytton from '../../assets/icons/arrow-up.svg';
 
 export const GlobalStyle = createGlobalStyle`
   html {

@@ -1,4 +1,4 @@
-import ArtPlug from '../assets/images/art-plug.png';
+import ArtPlug from '../app.pages.artist/assets/images/art-plug.png';
 
 const artists = [
   {
