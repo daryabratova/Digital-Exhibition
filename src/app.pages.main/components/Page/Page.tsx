@@ -45,29 +45,31 @@ const Home: React.FC = () => {
           </>
         )}
         <Styles.MenuOpen onClick={() => setMenuIsOpen(true)} />
-        <Styles.TitleLayout>
-          <div>
-            <Styles.Title>Trigger</Styles.Title>
-            <Styles.Subtitle>[Make it flow]</Styles.Subtitle>
-          </div>
-        </Styles.TitleLayout>
-        <Styles.DescriptionLayout>
-          <Styles.Description>
-            Триггер (триггерная система) — класс электронных устройств, обладающих способностью
-            длительно находиться в одном из двух устойчивых состояний и чередовать их под
-            воздействием внешних сигналов. Каждое состояние триггера легко распознаётся по значению
-            выходного напряжения. По характеру действия триггеры относятся к импульсным устройствам
-            — их активные элементы (транзисторы, лампы) работают в ключевом режиме, а смена
-            состояний длится очень короткое время.
-          </Styles.Description>
-          <Styles.Description>
-            Отличительной особенностью триггера как функционального устройства является свойство
-            запоминания двоичной информации. Под памятью триггера подразумевают способность
-            оставаться в одном из двух состояний и после прекращения действия переключающего
-            сигнала. Приняв одно из состояний за «1», а другое за «0», можно считать, что триггер
-            хранит (помнит) один разряд числа, записанного в двоичном коде.
-          </Styles.Description>
-        </Styles.DescriptionLayout>
+        <Styles.HeaderLayout>
+          <Styles.TitleLayout>
+            <div>
+              <Styles.Title>Trigger</Styles.Title>
+              <Styles.Subtitle>[Make it flow]</Styles.Subtitle>
+            </div>
+          </Styles.TitleLayout>
+          <Styles.DescriptionLayout>
+            <Styles.Description>
+              Триггер (триггерная система) — класс электронных устройств, обладающих способностью
+              длительно находиться в одном из двух устойчивых состояний и чередовать их под
+              воздействием внешних сигналов. Каждое состояние триггера легко распознаётся по
+              значению выходного напряжения. По характеру действия триггеры относятся к импульсным
+              устройствам — их активные элементы (транзисторы, лампы) работают в ключевом режиме, а
+              смена состояний длится очень короткое время.
+            </Styles.Description>
+            <Styles.Description>
+              Отличительной особенностью триггера как функционального устройства является свойство
+              запоминания двоичной информации. Под памятью триггера подразумевают способность
+              оставаться в одном из двух состояний и после прекращения действия переключающего
+              сигнала. Приняв одно из состояний за «1», а другое за «0», можно считать, что триггер
+              хранит (помнит) один разряд числа, записанного в двоичном коде.
+            </Styles.Description>
+          </Styles.DescriptionLayout>
+        </Styles.HeaderLayout>
       </header>
 
       <main>
@@ -75,7 +77,7 @@ const Home: React.FC = () => {
           {artists.map((artist) => {
             return (
               <Styles.Artist id={artist.id} key={artist.id}>
-                <img src={artist.artURL} alt="art" />
+                <Styles.Art src={artist.artURL} />
                 <Link
                   href={{ pathname: '/artists/[artistId]', query: { artistId: artist.id } }}
                   passHref
@@ -92,24 +94,26 @@ const Home: React.FC = () => {
       </main>
 
       <footer>
-        <Styles.CreatorsLayout id="creators">
-          {creators.map((creator) => {
-            return (
-              <Styles.Creator id={creator.name}>
-                <Styles.CreatorName>{creator.name}</Styles.CreatorName>
-                <Styles.CreatorJob>{creator.job}</Styles.CreatorJob>
-                <Styles.CreatorLinks>
-                  <Styles.CreatorLink>{creator.tg}</Styles.CreatorLink>
-                  <Styles.CreatorLink>{creator.in}</Styles.CreatorLink>
-                  <Styles.CreatorLink>{creator.vk}</Styles.CreatorLink>
-                </Styles.CreatorLinks>
-              </Styles.Creator>
-            );
-          })}
-          <Styles.ArrowWrapper>
-            <Styles.Arrow onClick={handleScrollToTop} />
-          </Styles.ArrowWrapper>
-        </Styles.CreatorsLayout>
+        <Styles.FooterLayout>
+          <Styles.CreatorsLayout id="creators">
+            {creators.map((creator) => {
+              return (
+                <Styles.Creator id={creator.name}>
+                  <Styles.CreatorName>{creator.name}</Styles.CreatorName>
+                  <Styles.CreatorJob>{creator.job}</Styles.CreatorJob>
+                  <Styles.CreatorLinks>
+                    <Styles.CreatorLink>{creator.tg}</Styles.CreatorLink>
+                    <Styles.CreatorLink>{creator.in}</Styles.CreatorLink>
+                    <Styles.CreatorLink>{creator.vk}</Styles.CreatorLink>
+                  </Styles.CreatorLinks>
+                </Styles.Creator>
+              );
+            })}
+            <Styles.ArrowWrapper>
+              <Styles.Arrow onClick={handleScrollToTop} />
+            </Styles.ArrowWrapper>
+          </Styles.CreatorsLayout>
+        </Styles.FooterLayout>
       </footer>
     </div>
   );

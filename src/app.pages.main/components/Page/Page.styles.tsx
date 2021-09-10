@@ -20,12 +20,20 @@ export const MenuGlobalStyle = createGlobalStyle`
   }
 `;
 
+export const HeaderLayout = styled.div`
+  @media screen and (min-width: 1250px) {
+    display: flex;
+    width: 100%;
+  }
+`;
+
 export const TitleLayout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
-  background-color: #e5e5e5; ;
+  background-color: #e5e5e5;
 `;
 
 export const MenuOpen = styled.button`
@@ -37,6 +45,15 @@ export const MenuOpen = styled.button`
   width: 48px;
   height: 48px;
   background-image: url(${menuOpen});
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+
+  @media screen and (min-width: 1250px) {
+    width: 101px;
+    height: 101px;
+    top: 80px;
+  }
 `;
 
 export const Menu = styled.div`
@@ -59,7 +76,15 @@ export const MenuClose = styled.button`
   height: 48px;
   margin-top: 20px;
   background-image: url(${menuClose});
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
+
+  @media screen and (min-width: 1250px) {
+    width: 101px;
+    height: 101px;
+    margin-top: 80px;
+  }
 `;
 
 export const MenuContent = styled.div`
@@ -72,6 +97,12 @@ export const MenuContent = styled.div`
   border-top: 3px solid #d5d5d5;
   border-bottom: 3px solid #d5d5d5;
   margin-top: 49px;
+
+  @media screen and (min-width: 1250px) {
+    width: calc(100% - 272px);
+    height: 54%;
+    margin-top: 51px;
+  }
 `;
 
 export const MenuArtist = styled.a`
@@ -81,6 +112,14 @@ export const MenuArtist = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   color: #f5f5f5;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1250px) {
+    font-size: 36px;
+  }
 `;
 
 export const MenuContacts = styled.a`
@@ -88,6 +127,15 @@ export const MenuContacts = styled.a`
   height: 31px;
   margin-top: 35px;
   background-image: url(${contacts});
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+
+  @media screen and (min-width: 1250px) {
+    width: 265px;
+    height: 41px;
+    margin-top: 81px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -95,6 +143,10 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-size: 64px;
   color: #000000;
+
+  @media screen and (min-width: 1250px) {
+    font-size: 144px;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -104,6 +156,10 @@ export const Subtitle = styled.h2`
   letter-spacing: 0.25em;
   text-align: center;
   color: #131313;
+
+  @media screen and (min-width: 1250px) {
+    font-size: 48px;
+  }
 `;
 
 export const DescriptionLayout = styled.div`
@@ -111,6 +167,7 @@ export const DescriptionLayout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
   background-color: #131313;
 `;
@@ -125,6 +182,12 @@ export const Description = styled.p`
   &:first-child {
     margin-bottom: 70px;
   }
+
+  @media screen and (min-width: 1250px) {
+    width: 565px;
+    font-size: 24px;
+    line-height: 28px;
+  }
 `;
 
 export const ArtistsLayout = styled.div`
@@ -132,6 +195,12 @@ export const ArtistsLayout = styled.div`
   background-image: url(${backgroundLines});
   background-position: center;
   background-repeat: repeat-y;
+
+  @media screen and (min-width: 1250px) {
+    width: 1032px;
+    padding: 0;
+    margin: 0 auto;
+  }
 `;
 
 export const Artist = styled.div`
@@ -141,6 +210,10 @@ export const Artist = styled.div`
   padding-top: 170px;
   font-size: 14px;
   letter-spacing: 0.1em;
+
+  img {
+    cursor: pointer;
+  }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
@@ -162,6 +235,69 @@ export const Artist = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media screen and (min-width: 1250px) {
+    align-items: flex-end;
+    width: 453px;
+    height: 226px;
+    font-size: 18px;
+    padding: 0;
+
+    img {
+      margin-right: 53px;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row;
+      padding: 0;
+
+      & > div {
+        align-items: flex-end;
+
+        & > a {
+          text-align: end;
+        }
+
+        & > img {
+          transform: none;
+        }
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      padding: 266px 0 0 287px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(5) {
+      padding: 40px 0 0 40px;
+    }
+
+    &:nth-child(3),
+    &:nth-child(6) {
+      padding: 40px 0 0 534px;
+    }
+
+    &:nth-child(7) {
+      padding: 0 0 264px 40px;
+    }
+  }
+`;
+
+export const Art = styled.div<{ src: string }>`
+  width: 130px;
+  height: 130px;
+  background-image: url(${({ src }) => src});
+  background-repeat: no-repeat;
+  background-size: 130px;
+  cursor: pointer;
+
+  @media screen and (min-width: 1250px) {
+    width: 206px;
+    height: 226px;
+    background-size: cover;
+  }
 `;
 
 export const ArtistDescription = styled.div`
@@ -169,23 +305,38 @@ export const ArtistDescription = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media screen and (min-width: 1250px) {
+    height: 60%;
+  }
 `;
 
 export const ArtistName = styled.a`
   display: inline-block;
   width: 130px;
   text-align: end;
+  cursor: pointer;
+
+  @media screen and (min-width: 1250px) {
+    width: 165px;
+  }
 `;
 
 export const CreatorsLayout = styled.div`
   background-color: #131313;
+
+  @media screen and (min-width: 1250px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 532px;
+  }
 `;
 
 export const Creator = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 18px;
   text-transform: uppercase;
   color: #f5f5f5;
 
@@ -196,6 +347,10 @@ export const Creator = styled.div`
     align-items: center;
     height: 134px;
     text-transform: none;
+
+    @media screen and (min-width: 1250px) {
+      height: 170px;
+    }
   }
 `;
 
@@ -203,12 +358,21 @@ export const CreatorName = styled.p`
   margin: 55px 0 12px;
   font-size: 24px;
   letter-spacing: 0.1em;
+
+  @media screen and (min-width: 1250px) {
+    font-size: 36px;
+  }
 `;
 
 export const CreatorJob = styled.p`
   font-family: auto;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1250px) {
+    font-size: 24px;
+  }
 `;
 
 export const CreatorLinks = styled.div`
@@ -217,6 +381,10 @@ export const CreatorLinks = styled.div`
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.1em;
+
+  @media screen and (min-width: 1250px) {
+    font-size: 24px;
+  }
 `;
 
 export const CreatorLink = styled.div`
@@ -245,10 +413,21 @@ export const CreatorLink = styled.div`
   }
 `;
 
+export const FooterLayout = styled.div`
+  @media screen and (min-width: 1250px) {
+    position: relative;
+  }
+`;
+
 export const ArrowWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 35px 0;
+
+  @media screen and (min-width: 1250px) {
+    position: absolute;
+    bottom: 452px;
+  }
 `;
 
 export const Arrow = styled.button`
@@ -258,4 +437,10 @@ export const Arrow = styled.button`
   background-image: url(${arrowBytton});
   background-repeat: no-repeat;
   cursor: pointer;
+
+  @media screen and (min-width: 1250px) {
+    width: 101px;
+    height: 101px;
+    background-size: cover;
+  }
 `;
