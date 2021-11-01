@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+
 import LinkToMenu from '../../assets/icons/arrow-menu.svg';
 import EmptyCircle from '../../assets/icons/circle-empty.svg';
 import FilledCircle from '../../assets/icons/circle-full.svg';
@@ -24,6 +25,12 @@ export const ArtistLayout = styled.div`
 export const Artist = styled.div`
   width: 250px;
   margin: 25px 0;
+
+  @media screen and (min-width: 1200px) {
+    width: 1100px;
+    margin: 0;
+    padding: 60px 0;
+  }
 `;
 
 export const LinkMain = styled.a`
@@ -31,6 +38,7 @@ export const LinkMain = styled.a`
   width: 150px;
   height: 25px;
   background-image: url(${LinkToMenu});
+  cursor: pointer;
 `;
 
 export const ArtistPagination = styled.div`
@@ -38,6 +46,12 @@ export const ArtistPagination = styled.div`
   width: 210px;
   height: 23px;
   margin: 60px auto 0;
+
+  @media screen and (min-width: 1200px) {
+    width: 355px;
+    height: 40px;
+    margin: -25px auto 0;
+  }
 `;
 
 export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
@@ -47,6 +61,23 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
   background-image: url(${(props) => (props.filledCircle ? FilledCircle : EmptyCircle)});
   background-size: 23px;
   background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 1200px) {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    background-size: 38px;
+  }
+`;
+
+export const ArtistInfo = styled.div`
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 204px;
+  }
 `;
 
 export const ArtistName = styled.div`
@@ -56,10 +87,21 @@ export const ArtistName = styled.div`
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #f5f5f5;
+
+  @media screen and (min-width: 1200px) {
+    width: 774px;
+    margin-top: 0;
+    font-size: 72px;
+    line-height: 84px;
+  }
 `;
 
 export const ArtistLinks = styled.div`
   margin-top: 41px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
 `;
 
 export const ArtistLink = styled.div`
@@ -85,6 +127,14 @@ export const ArtistLink = styled.div`
     background-image: url(${VkIcon});
     background-size: 47px 24px;
   }
+
+  @media screen and (min-width: 1200px) {
+    height: 30px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 28px;
+    background-size: 45px 30px;
+  }
 `;
 
 export const Decoration = styled.div`
@@ -93,6 +143,11 @@ export const Decoration = styled.div`
   width: 100%;
   height: 90px;
   background-color: #d5d5d5;
+
+  @media screen and (min-width: 1200px) {
+    bottom: 250px;
+    height: 127px;
+  }
 `;
 
 export const PicturesLayout = styled.div`
@@ -107,6 +162,22 @@ export const Title = styled.div`
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #f5f5f5;
+
+  @media screen and (min-width: 1200px) {
+    width: 333px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+`;
+
+export const ArtLayout = styled.div`
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 300px;
+  }
 `;
 
 export const Picture = styled.div`
@@ -114,6 +185,13 @@ export const Picture = styled.div`
   height: 345px;
   margin: 26px auto 0;
   background-color: #e6e6e6;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    margin: 0;
+  }
 `;
 
 export const Description = styled.div`
@@ -123,6 +201,13 @@ export const Description = styled.div`
   font-family: initial;
   font-size: 18px;
   color: #f5f5f5;
+
+  @media screen and (min-width: 1200px) {
+    width: 425px;
+    margin: 150px 0 0 100px;
+    font-size: 24px;
+    line-height: 28px;
+  }
 `;
 
 export const ArrowUp = styled.button`
@@ -135,5 +220,12 @@ export const ArrowUp = styled.button`
   height: 48px;
   margin: 0 auto;
   background-image: url(${Arrow});
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    width: 100px;
+    height: 100px;
+  }
 `;

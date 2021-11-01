@@ -38,12 +38,14 @@ export default function Page() {
                 );
               })}
             </Styles.ArtistPagination>
-            <Styles.ArtistName>{currentArtist.name}</Styles.ArtistName>
-            <Styles.ArtistLinks>
-              <Styles.ArtistLink>{currentArtist.tg}</Styles.ArtistLink>
-              <Styles.ArtistLink>{currentArtist.in}</Styles.ArtistLink>
-              <Styles.ArtistLink>{currentArtist.vk}</Styles.ArtistLink>
-            </Styles.ArtistLinks>
+            <Styles.ArtistInfo>
+              <Styles.ArtistName>{currentArtist.name}</Styles.ArtistName>
+              <Styles.ArtistLinks>
+                <Styles.ArtistLink>{currentArtist.tg}</Styles.ArtistLink>
+                <Styles.ArtistLink>{currentArtist.in}</Styles.ArtistLink>
+                <Styles.ArtistLink>{currentArtist.vk}</Styles.ArtistLink>
+              </Styles.ArtistLinks>
+            </Styles.ArtistInfo>
           </Styles.Artist>
           <Styles.Decoration />
         </Styles.ArtistLayout>
@@ -54,11 +56,13 @@ export default function Page() {
           {/* TODO add keys */}
           {pictures.map(() => {
             return (
-              <div>
-                <Styles.Title>{currentArtist.title}</Styles.Title>
-                <Styles.Picture />
+              <Styles.ArtLayout>
+                <div>
+                  <Styles.Title>{currentArtist.title}</Styles.Title>
+                  <Styles.Picture />
+                </div>
                 <Styles.Description>{currentArtist.description} </Styles.Description>
-              </div>
+              </Styles.ArtLayout>
             );
           })}
           <Styles.ArrowUp onClick={handleScrollToTop} />
