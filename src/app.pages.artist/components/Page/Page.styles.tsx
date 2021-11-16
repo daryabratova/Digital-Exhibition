@@ -8,6 +8,11 @@ import InstIcon from '../../assets/icons/in.svg';
 import VkIcon from '../../assets/icons/vk.svg';
 import Arrow from '../../assets/icons/arrow-up.svg';
 
+import DecorationMobile from '../../assets/images/artist-decoration-mobile.png';
+import DecorationDesktop from '../../assets/images/artist-decoration-desktop.png';
+import BackgroundMobile from '../../assets/images/artist-main-mobile.svg';
+import BackgroundDesktop from '../../assets/images/artist-main-desktop.svg';
+
 export const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
@@ -142,11 +147,14 @@ export const Decoration = styled.div`
   bottom: 26px;
   width: 100%;
   height: 90px;
-  background-color: #d5d5d5;
+  background-color: #131313;
+  background-image: url(${DecorationMobile});
+  background-repeat: repeat-x;
 
   @media screen and (min-width: 1200px) {
     bottom: 250px;
     height: 127px;
+    background-image: url(${DecorationDesktop});
   }
 `;
 
@@ -154,6 +162,13 @@ export const PicturesLayout = styled.div`
   position: relative;
   width: 100%;
   background-color: #131313;
+  background-image: url(${BackgroundMobile});
+  background-position: center;
+  background-repeat: repeat-y;
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(${BackgroundDesktop});
+  }
 `;
 
 export const Title = styled.div`

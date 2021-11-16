@@ -1,12 +1,15 @@
 import styled, { createGlobalStyle } from 'styled-components';
+
 import menuOpen from '../../assets/icons/menu-open.svg';
 import menuClose from '../../assets/icons/menu-close.svg';
 import contacts from '../../assets/icons/contacts.svg';
-import backgroundLines from '../../assets/icons/background-lines.svg';
 import tgIcon from '../../assets/icons/tg.svg';
 import inIcon from '../../assets/icons/in.svg';
 import vkIcon from '../../assets/icons/vk.svg';
 import arrowBytton from '../../assets/icons/arrow-up.svg';
+
+import backgroundMobile from '../../assets/images/main-background-mobile.svg';
+import backgroundDesktop from '../../assets/images/main-background-desktop.svg';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -192,14 +195,17 @@ export const Description = styled.p`
 
 export const ArtistsLayout = styled.div`
   padding: 0 15px 30px;
-  background-image: url(${backgroundLines});
+  background-image: url(${backgroundMobile});
   background-position: center;
   background-repeat: repeat-y;
 
   @media screen and (min-width: 1250px) {
-    width: 1032px;
+    width: 1200px;
     padding: 0;
     margin: 0 auto;
+    background-image: url(${backgroundDesktop});
+    background-repeat: repeat-y;
+    background-position: center;
   }
 `;
 
@@ -266,21 +272,21 @@ export const Artist = styled.div`
 
     &:nth-child(1),
     &:nth-child(4) {
-      padding: 266px 0 0 287px;
+      padding: 266px 0 0 344px;
     }
 
     &:nth-child(2),
     &:nth-child(5) {
-      padding: 40px 0 0 40px;
+      padding: 40px 0 0 76px;
     }
 
     &:nth-child(3),
     &:nth-child(6) {
-      padding: 40px 0 0 534px;
+      padding: 120px 0 0 615px;
     }
 
     &:nth-child(7) {
-      padding: 0 0 264px 40px;
+      padding: 0 0 264px 76px;
     }
   }
 `;
@@ -294,7 +300,7 @@ export const Art = styled.div<{ src: string }>`
   cursor: pointer;
 
   @media screen and (min-width: 1250px) {
-    width: 206px;
+    width: 239px;
     height: 226px;
     background-size: cover;
   }
