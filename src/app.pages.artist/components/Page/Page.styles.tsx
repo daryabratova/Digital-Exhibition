@@ -33,8 +33,8 @@ export const Artist = styled.div`
 
   @media screen and (min-width: 1200px) {
     width: 1100px;
-    margin: 0;
     padding: 60px 0;
+    margin: 0;
   }
 `;
 
@@ -136,9 +136,9 @@ export const ArtistLink = styled.div`
   @media screen and (min-width: 1200px) {
     height: 30px;
     margin-bottom: 40px;
+    background-size: 45px 30px;
     font-size: 20px;
     line-height: 28px;
-    background-size: 45px 30px;
   }
 `;
 
@@ -191,8 +191,8 @@ export const ArtLayout = styled.div`
   @media screen and (min-width: 1200px) {
     display: flex;
     width: 1000px;
-    margin: 0 auto;
     padding-bottom: 300px;
+    margin: 0 auto;
   }
 `;
 
@@ -212,8 +212,8 @@ export const Picture = styled.div`
 
 export const Description = styled.div`
   width: 345px;
-  margin: 13px auto 0;
   padding-bottom: 100px;
+  margin: 13px auto 0;
   font-size: 18px;
   color: #f5f5f5;
 

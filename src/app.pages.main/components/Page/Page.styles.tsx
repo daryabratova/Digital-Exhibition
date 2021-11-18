@@ -61,18 +61,18 @@ export const MenuOpen = styled.button`
 `;
 
 export const Menu = styled.div`
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100vh;
   background-color: #131313;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  overflow: hidden;
   font-family: Black Acute, serif;
+  overflow: hidden;
 `;
 
 export const MenuClose = styled.button`
@@ -99,9 +99,9 @@ export const MenuContent = styled.div`
   justify-content: center;
   width: calc(100% - 20px);
   height: 64%;
+  margin-top: 49px;
   border-top: 3px solid #d5d5d5;
   border-bottom: 3px solid #d5d5d5;
-  margin-top: 49px;
 
   @media screen and (min-width: 1250px) {
     width: calc(100% - 272px);
@@ -252,8 +252,8 @@ export const Artist = styled.div`
     align-items: flex-end;
     width: 453px;
     height: 226px;
-    font-size: 18px;
     padding: 0;
+    font-size: 18px;
 
     img {
       margin-right: 53px;
@@ -378,9 +378,9 @@ export const CreatorName = styled.p`
 `;
 
 export const CreatorJob = styled.p`
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 20px;
 
   @media screen and (min-width: 1250px) {
     font-size: 24px;
@@ -402,9 +402,9 @@ export const CreatorLink = styled.div`
   width: 100%;
   padding-left: 110px;
   margin-bottom: 30px;
-  font-weight: 400;
   background-repeat: no-repeat;
   background-position: 15px;
+  font-weight: 400;
   line-height: 24px;
 
   &:nth-child(1) {
