@@ -37,6 +37,7 @@ export const TitleLayout = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #e5e5e5;
+  font-family: Black Acute, serif;
 `;
 
 export const MenuOpen = styled.button`
@@ -71,6 +72,7 @@ export const Menu = styled.div`
   left: 0;
   top: 0;
   overflow: hidden;
+  font-family: Black Acute, serif;
 `;
 
 export const MenuClose = styled.button`
@@ -179,17 +181,20 @@ export const Description = styled.p`
   width: 277px;
   line-height: 16px;
   font-size: 14px;
-  font-family: auto;
   color: #f5f5f5;
 
   &:first-child {
-    margin-bottom: 70px;
+    margin-bottom: 15px;
   }
 
   @media screen and (min-width: 1250px) {
     width: 565px;
     font-size: 24px;
     line-height: 28px;
+
+    &:first-child {
+      margin-bottom: 35px;
+    }
   }
 `;
 
@@ -214,6 +219,7 @@ export const Artist = styled.div`
   justify-content: space-between;
   height: 130px;
   padding-top: 170px;
+  font-family: Black Acute, serif;
   font-size: 14px;
   letter-spacing: 0.1em;
 
@@ -362,6 +368,7 @@ export const Creator = styled.div`
 
 export const CreatorName = styled.p`
   margin: 55px 0 12px;
+  font-family: Black Acute, serif;
   font-size: 24px;
   letter-spacing: 0.1em;
 
@@ -371,7 +378,6 @@ export const CreatorName = styled.p`
 `;
 
 export const CreatorJob = styled.p`
-  font-family: auto;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -383,13 +389,11 @@ export const CreatorJob = styled.p`
 
 export const CreatorLinks = styled.div`
   width: 100%;
-  font-family: auto;
-  font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.1em;
 
   @media screen and (min-width: 1250px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 

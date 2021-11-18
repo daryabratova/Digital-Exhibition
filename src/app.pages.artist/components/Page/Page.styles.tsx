@@ -88,6 +88,7 @@ export const ArtistInfo = styled.div`
 export const ArtistName = styled.div`
   width: 250px;
   margin-top: 94px;
+  font-family: Black Acute, serif;
   font-size: 28px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -117,7 +118,6 @@ export const ArtistLink = styled.div`
   background-repeat: no-repeat;
   background-position: left;
   background-size: 39px 24px;
-  font-family: initial;
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 0.1em;
@@ -136,7 +136,7 @@ export const ArtistLink = styled.div`
   @media screen and (min-width: 1200px) {
     height: 30px;
     margin-bottom: 40px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     background-size: 45px 30px;
   }
@@ -173,6 +173,7 @@ export const PicturesLayout = styled.div`
 
 export const Title = styled.div`
   padding: 36px 0 0 13px;
+  font-family: Black Acute, serif;
   font-size: 24px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -213,7 +214,6 @@ export const Description = styled.div`
   width: 345px;
   margin: 13px auto 0;
   padding-bottom: 100px;
-  font-family: initial;
   font-size: 18px;
   color: #f5f5f5;
 

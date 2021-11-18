@@ -12,6 +12,6 @@ export const Global = createGlobalStyle`
   } 
   
   body {
-    font-family: Black Acute;
+    font-family: "Roboto Mono";
   }
 `;

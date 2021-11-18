@@ -1,3 +1,6 @@
+import '@fontsource/roboto-mono/400.css';
+import '@fontsource/roboto-mono/700.css';
+
 import React from 'react';
 import { AppProps } from 'next/app';
 
