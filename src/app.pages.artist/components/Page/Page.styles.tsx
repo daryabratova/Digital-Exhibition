@@ -33,8 +33,21 @@ export const Artist = styled.div`
 
   @media screen and (min-width: 1200px) {
     width: 1100px;
-    padding: 60px 0;
+    height: 520px;
+    padding: 60px 0 0;
     margin: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 680px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(${BackgroundDesktop});
+      background-repeat: repeat-y;
+      background-position: center;
+    }
   }
 `;
 
@@ -152,7 +165,7 @@ export const Decoration = styled.div`
   background-repeat: repeat-x;
 
   @media screen and (min-width: 1200px) {
-    bottom: 250px;
+    bottom: 150px;
     height: 127px;
     background-image: url(${DecorationDesktop});
   }

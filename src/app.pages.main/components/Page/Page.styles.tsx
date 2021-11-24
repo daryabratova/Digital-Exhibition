@@ -283,16 +283,16 @@ export const Artist = styled.div`
 
     &:nth-child(2),
     &:nth-child(5) {
-      padding: 40px 0 0 76px;
+      padding: 40px 0 0 75px;
     }
 
     &:nth-child(3),
     &:nth-child(6) {
-      padding: 120px 0 0 615px;
+      padding: 120px 0 0 614px;
     }
 
     &:nth-child(7) {
-      padding: 0 0 264px 76px;
+      padding: 0 0 264px 75px;
     }
   }
 `;
@@ -306,7 +306,7 @@ export const Art = styled.div<{ src: string }>`
   cursor: pointer;
 
   @media screen and (min-width: 1250px) {
-    width: 239px;
+    width: 240px;
     height: 226px;
     background-size: cover;
   }
@@ -320,6 +320,7 @@ export const ArtistDescription = styled.div`
 
   @media screen and (min-width: 1250px) {
     height: 60%;
+    margin-bottom: 35px;
   }
 `;
 
@@ -388,7 +389,7 @@ export const CreatorJob = styled.p`
 `;
 
 export const CreatorLinks = styled.div`
-  width: 100%;
+  margin: 0 auto;
   font-size: 18px;
   letter-spacing: 0.1em;
 
