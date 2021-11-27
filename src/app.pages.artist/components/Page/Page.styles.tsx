@@ -1,11 +1,20 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 import LinkToMenu from '../../assets/icons/arrow-menu.svg';
+import LinkToMenuActive from '../../assets/icons/arrow-menu-active.svg';
 import EmptyCircle from '../../assets/icons/circle-empty.svg';
 import FilledCircle from '../../assets/icons/circle-full.svg';
+
 import TgIcon from '../../assets/icons/tg.svg';
 import InstIcon from '../../assets/icons/in.svg';
 import VkIcon from '../../assets/icons/vk.svg';
+import TgIconHover from '../../assets/icons/tg-hover.svg';
+import InIconHover from '../../assets/icons/in-hover.svg';
+import VkIconHover from '../../assets/icons/vk-hover.svg';
+import TgIconActive from '../../assets/icons/tg-active.svg';
+import InIconActive from '../../assets/icons/in-active.svg';
+import VkIconActive from '../../assets/icons/vk-active.svg';
+
 import Arrow from '../../assets/icons/arrow-up.svg';
 
 import DecorationMobile from '../../assets/images/artist-decoration-mobile.png';
@@ -56,7 +65,13 @@ export const LinkMain = styled.a`
   width: 150px;
   height: 25px;
   background-image: url(${LinkToMenu});
+  transition: all 0.2s;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-image: url(${LinkToMenuActive});
+  }
 `;
 
 export const ArtistPagination = styled.div`
@@ -80,6 +95,11 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
   background-size: 23px;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.1s;
+
+  &:hover {
+    background-image: url(${FilledCircle});
+  }
 
   @media screen and (min-width: 1200px) {
     width: 40px;
@@ -123,7 +143,8 @@ export const ArtistLinks = styled.div`
   }
 `;
 
-export const ArtistLink = styled.div`
+export const ArtistLink = styled.a`
+  display: block;
   height: 25px;
   padding-left: 72px;
   margin-bottom: 27px;
@@ -135,23 +156,57 @@ export const ArtistLink = styled.div`
   line-height: 25px;
   letter-spacing: 0.1em;
   color: #f5f5f5;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url(${TgIconHover});
+  }
+
+  &:active {
+    background-image: url(${TgIconActive});
+  }
 
   &:nth-child(2) {
     background-image: url(${InstIcon});
     background-size: 28px 23px;
+
+    &:hover {
+      background-image: url(${InIconHover});
+    }
+
+    &:active {
+      background-image: url(${InIconActive});
+    }
   }
 
   &:nth-child(3) {
     background-image: url(${VkIcon});
     background-size: 47px 24px;
+
+    &:hover {
+      background-image: url(${VkIconHover});
+    }
+
+    &:active {
+      background-image: url(${VkIconActive});
+    }
   }
 
   @media screen and (min-width: 1200px) {
     height: 30px;
     margin-bottom: 40px;
-    background-size: 45px 30px;
+    background-size: 50px 45px;
     font-size: 20px;
     line-height: 28px;
+
+    &:nth-child(2) {
+      background-size: 40px 35px;
+    }
+
+    &:nth-child(3) {
+      background-size: 50px 45px;
+    }
   }
 `;
 

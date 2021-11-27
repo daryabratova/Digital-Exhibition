@@ -1,15 +1,25 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-import menuOpen from '../../assets/icons/menu-open.svg';
-import menuClose from '../../assets/icons/menu-close.svg';
-import contacts from '../../assets/icons/contacts.svg';
-import tgIcon from '../../assets/icons/tg.svg';
-import inIcon from '../../assets/icons/in.svg';
-import vkIcon from '../../assets/icons/vk.svg';
-import arrowBytton from '../../assets/icons/arrow-up.svg';
+import MenuOpenIcon from '../../assets/icons/menu-open.svg';
+import MenuCloseIcon from '../../assets/icons/menu-close.svg';
+import Contacts from '../../assets/icons/contacts.svg';
+import ContactsHover from '../../assets/icons/contacts-hover.svg';
+import ContactsActive from '../../assets/icons/contacts-active.svg';
 
-import backgroundMobile from '../../assets/images/main-background-mobile.svg';
-import backgroundDesktop from '../../assets/images/main-background-desktop.svg';
+import TgIcon from '../../assets/icons/tg.svg';
+import InIcon from '../../assets/icons/in.svg';
+import VkIcon from '../../assets/icons/vk.svg';
+import TgIconHover from '../../assets/icons/tg-hover.svg';
+import InIconHover from '../../assets/icons/in-hover.svg';
+import VkIconHover from '../../assets/icons/vk-hover.svg';
+import TgIconActive from '../../assets/icons/tg-active.svg';
+import InIconActive from '../../assets/icons/in-active.svg';
+import VkIconActive from '../../assets/icons/vk-active.svg';
+
+import ArrowBytton from '../../assets/icons/arrow-up.svg';
+
+import BackgroundMobile from '../../assets/images/main-background-mobile.svg';
+import BackgroundDesktop from '../../assets/images/main-background-desktop.svg';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -48,7 +58,7 @@ export const MenuOpen = styled.button`
   transform: translateX(-50%);
   width: 48px;
   height: 48px;
-  background-image: url(${menuOpen});
+  background-image: url(${MenuOpenIcon});
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -80,9 +90,10 @@ export const MenuClose = styled.button`
   width: 48px;
   height: 48px;
   margin-top: 20px;
-  background-image: url(${menuClose});
+  background-image: url(${MenuCloseIcon});
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 0.2s;
   cursor: pointer;
 
   @media screen and (min-width: 1250px) {
@@ -117,6 +128,11 @@ export const MenuArtist = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   color: #f5f5f5;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #fbec5d;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -131,15 +147,26 @@ export const MenuContacts = styled.a`
   width: 199px;
   height: 31px;
   margin-top: 35px;
-  background-image: url(${contacts});
+  background-image: url(${Contacts});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: 180px 30px;
+  transition: all 0.2s;
   cursor: pointer;
+
+  &:hover {
+    background-image: url(${ContactsHover});
+  }
+
+  &:active {
+    background-image: url(${ContactsActive});
+  }
 
   @media screen and (min-width: 1250px) {
     width: 265px;
     height: 41px;
     margin-top: 81px;
+    background-size: 264px 41px;
   }
 `;
 
@@ -200,7 +227,7 @@ export const Description = styled.p`
 
 export const ArtistsLayout = styled.div`
   padding: 0 15px 30px;
-  background-image: url(${backgroundMobile});
+  background-image: url(${BackgroundMobile});
   background-position: center;
   background-repeat: repeat-y;
 
@@ -208,7 +235,7 @@ export const ArtistsLayout = styled.div`
     width: 1200px;
     padding: 0;
     margin: 0 auto;
-    background-image: url(${backgroundDesktop});
+    background-image: url(${BackgroundDesktop});
     background-repeat: repeat-y;
     background-position: center;
   }
@@ -257,6 +284,13 @@ export const Artist = styled.div`
 
     img {
       margin-right: 53px;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      img {
+        margin-right: 68px;
+      }
     }
 
     &:nth-child(even) {
@@ -328,7 +362,12 @@ export const ArtistName = styled.a`
   display: inline-block;
   width: 130px;
   text-align: end;
+  transition: all 0.2s;
   cursor: pointer;
+
+  &:active {
+    color: #fbec5d;
+  }
 
   @media screen and (min-width: 1250px) {
     width: 165px;
@@ -398,29 +437,55 @@ export const CreatorLinks = styled.div`
   }
 `;
 
-export const CreatorLink = styled.div`
+export const CreatorLink = styled.a`
   box-sizing: border-box;
   width: 100%;
-  padding-left: 110px;
+  padding-left: 90px;
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: 15px;
   font-weight: 400;
   line-height: 24px;
+  transition: all 0.2s;
+  cursor: pointer;
 
   &:nth-child(1) {
-    background-image: url(${tgIcon});
+    background-image: url(${TgIcon});
     background-size: 39px 24px;
+
+    &:hover {
+      background-image: url(${TgIconHover});
+    }
+
+    &:active {
+      background-image: url(${TgIconActive});
+    }
   }
 
   &:nth-child(2) {
-    background-image: url(${inIcon});
-    background-size: 28px 23px;
+    background-image: url(${InIcon});
+    background-size: 30px 26px;
+
+    &:hover {
+      background-image: url(${InIconHover});
+    }
+
+    &:active {
+      background-image: url(${InIconActive});
+    }
   }
 
   &:nth-child(3) {
-    background-image: url(${vkIcon});
-    background-size: 47px 24px;
+    background-image: url(${VkIcon});
+    background-size: 45px 22px;
+
+    &:hover {
+      background-image: url(${VkIconHover});
+    }
+
+    &:active {
+      background-image: url(${VkIconActive});
+    }
   }
 `;
 
@@ -445,7 +510,7 @@ export const Arrow = styled.button`
   all: unset;
   width: 48px;
   height: 48px;
-  background-image: url(${arrowBytton});
+  background-image: url(${ArrowBytton});
   background-repeat: no-repeat;
   cursor: pointer;
 
