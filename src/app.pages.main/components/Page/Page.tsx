@@ -98,7 +98,7 @@ const Home: React.FC = () => {
           <Styles.CreatorsLayout id="creators">
             {creators.map((creator) => {
               return (
-                <Styles.Creator id={creator.name}>
+                <Styles.Creator id={creator.name} key={creator.name}>
                   <Styles.CreatorName>{creator.name}</Styles.CreatorName>
                   <Styles.CreatorJob>{creator.job}</Styles.CreatorJob>
                   <Styles.CreatorLinks>

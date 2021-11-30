@@ -5,7 +5,7 @@ import { artists } from '../../../data';
 
 import * as Styles from './Page.styles';
 
-const pictures = Array.from(Array(5));
+const pictures = Array.from(Array(5).keys());
 
 export default function Page() {
   const handleScrollToTop = () => {
@@ -53,10 +53,9 @@ export default function Page() {
 
       <main>
         <Styles.PicturesLayout>
-          {/* TODO add keys */}
-          {pictures.map(() => {
+          {pictures.map((picture) => {
             return (
-              <Styles.ArtLayout>
+              <Styles.ArtLayout key={picture}>
                 <div>
                   <Styles.Title>{currentArtist.title}</Styles.Title>
                   <Styles.Picture />
