@@ -63,6 +63,12 @@ export const MenuOpen = styled.button`
   background-size: cover;
   cursor: pointer;
 
+  @media screen and (min-width: 700px) {
+    width: 80px;
+    height: 80px;
+    top: 60px;
+  }
+
   @media screen and (min-width: 1250px) {
     width: 101px;
     height: 101px;
@@ -95,6 +101,12 @@ export const MenuClose = styled.button`
   background-size: cover;
   transition: all 0.2s;
   cursor: pointer;
+
+  @media screen and (min-width: 700px) {
+    width: 80px;
+    height: 80px;
+    margin-top: 60px;
+  }
 
   @media screen and (min-width: 1250px) {
     width: 101px;
@@ -138,6 +150,10 @@ export const MenuArtist = styled.a`
     margin-bottom: 0;
   }
 
+  @media screen and (min-width: 700px) {
+    font-size: 28px;
+  }
+
   @media screen and (min-width: 1250px) {
     font-size: 36px;
   }
@@ -162,6 +178,13 @@ export const MenuContacts = styled.a`
     background-image: url(${ContactsActive});
   }
 
+  @media screen and (min-width: 700px) {
+    width: 245px;
+    height: 31px;
+    margin-top: 61px;
+    background-size: 224px 31px;
+  }
+
   @media screen and (min-width: 1250px) {
     width: 265px;
     height: 41px;
@@ -176,6 +199,10 @@ export const Title = styled.h1`
   font-size: 64px;
   color: #000000;
 
+  @media screen and (min-width: 700px) {
+    font-size: 104px;
+  }
+
   @media screen and (min-width: 1250px) {
     font-size: 144px;
   }
@@ -188,6 +215,10 @@ export const Subtitle = styled.h2`
   letter-spacing: 0.25em;
   text-align: center;
   color: #131313;
+
+  @media screen and (min-width: 700px) {
+    font-size: 32px;
+  }
 
   @media screen and (min-width: 1250px) {
     font-size: 48px;
@@ -212,6 +243,16 @@ export const Description = styled.p`
 
   &:first-child {
     margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 400px;
+    font-size: 18px;
+    line-height: 22px;
+
+    &:first-child {
+      margin-bottom: 45px;
+    }
   }
 
   @media screen and (min-width: 1250px) {
@@ -275,11 +316,18 @@ export const Artist = styled.div`
     margin-bottom: 0;
   }
 
+  @media screen and (min-width: 700px) {
+    width: 640px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
   @media screen and (min-width: 1250px) {
     align-items: flex-end;
     width: 453px;
     height: 226px;
     padding: 0;
+    margin: 0;
     font-size: 18px;
 
     img {
@@ -339,6 +387,12 @@ export const Art = styled.div<{ src: string }>`
   background-size: 130px;
   cursor: pointer;
 
+  @media screen and (min-width: 700px) {
+    width: 300px;
+    height: 300px;
+    background-repeat: repeat;
+  }
+
   @media screen and (min-width: 1250px) {
     width: 240px;
     height: 226px;
@@ -352,9 +406,14 @@ export const ArtistDescription = styled.div`
   justify-content: space-between;
   align-items: flex-end;
 
+  @media screen and (min-width: 700px) {
+    justify-content: space-evenly;
+  }
+
   @media screen and (min-width: 1250px) {
     height: 60%;
     margin-bottom: 35px;
+    justify-content: space-between;
   }
 `;
 
@@ -367,6 +426,10 @@ export const ArtistName = styled.a`
 
   &:active {
     color: #fbec5d;
+  }
+
+  @media screen and (min-width: 700px) {
+    font-size: 18px;
   }
 
   @media screen and (min-width: 1250px) {
@@ -400,7 +463,7 @@ export const Creator = styled.div`
     height: 134px;
     text-transform: none;
 
-    @media screen and (min-width: 1250px) {
+    @media screen and (min-width: 700px) {
       height: 170px;
     }
   }
@@ -412,6 +475,10 @@ export const CreatorName = styled.p`
   font-size: 24px;
   letter-spacing: 0.1em;
 
+  @media screen and (min-width: 700px) {
+    font-size: 28px;
+  }
+
   @media screen and (min-width: 1250px) {
     font-size: 36px;
   }
@@ -421,6 +488,10 @@ export const CreatorJob = styled.p`
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
+
+  @media screen and (min-width: 700px) {
+    font-size: 20px;
+  }
 
   @media screen and (min-width: 1250px) {
     font-size: 24px;
@@ -514,9 +585,14 @@ export const Arrow = styled.button`
   background-repeat: no-repeat;
   cursor: pointer;
 
+  @media screen and (min-width: 700px) {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+  }
+
   @media screen and (min-width: 1250px) {
     width: 101px;
     height: 101px;
-    background-size: cover;
   }
 `;

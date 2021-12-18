@@ -40,11 +40,9 @@ export const Artist = styled.div`
   width: 250px;
   margin: 25px 0;
 
-  @media screen and (min-width: 1200px) {
-    width: 1100px;
-    height: 520px;
+  @media screen and (min-width: 700px) {
+    width: 640px;
     padding: 60px 0 0;
-    margin: 0;
 
     &::after {
       content: '';
@@ -57,6 +55,12 @@ export const Artist = styled.div`
       background-repeat: repeat-y;
       background-position: center;
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1100px;
+    height: 520px;
+    margin: 0;
   }
 `;
 
@@ -80,6 +84,12 @@ export const ArtistPagination = styled.div`
   height: 23px;
   margin: 60px auto 0;
 
+  @media screen and (min-width: 700px) {
+    width: 245px;
+    height: 40px;
+    margin: -30px auto 0;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 355px;
     height: 40px;
@@ -101,6 +111,12 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
     background-image: url(${FilledCircle});
   }
 
+  @media screen and (min-width: 700px) {
+    width: 30px;
+    height: 30px;
+    background-size: 28px;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 40px;
     height: 40px;
@@ -110,7 +126,7 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
 `;
 
 export const ArtistInfo = styled.div`
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 700px) {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -126,6 +142,12 @@ export const ArtistName = styled.div`
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #f5f5f5;
+
+  @media screen and (min-width: 700px) {
+    margin-top: 38px;
+    font-size: 38px;
+    line-height: 48px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 774px;
@@ -193,6 +215,16 @@ export const ArtistLink = styled.a`
     }
   }
 
+  @media screen and (min-width: 700px) {
+    &:nth-child(2) {
+      background-size: 32px 25px;
+    }
+
+    &:nth-child(3) {
+      background-size: 42px 30px;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
     height: 30px;
     margin-bottom: 40px;
@@ -219,6 +251,12 @@ export const Decoration = styled.div`
   background-image: url(${DecorationMobile});
   background-repeat: repeat-x;
 
+  @media screen and (min-width: 700px) {
+    bottom: 220px;
+    height: 127px;
+    background-image: url(${DecorationDesktop});
+  }
+
   @media screen and (min-width: 1200px) {
     bottom: 150px;
     height: 127px;
@@ -234,6 +272,10 @@ export const PicturesLayout = styled.div`
   background-position: center;
   background-repeat: repeat-y;
 
+  @media screen and (min-width: 700px) {
+    background-image: url(${BackgroundDesktop});
+  }
+
   @media screen and (min-width: 1200px) {
     background-image: url(${BackgroundDesktop});
   }
@@ -247,8 +289,17 @@ export const Title = styled.div`
   text-transform: uppercase;
   color: #f5f5f5;
 
+  @media screen and (min-width: 700px) {
+    width: 345px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 333px;
+    margin: 0;
     margin-bottom: 30px;
     font-size: 36px;
     line-height: 42px;
@@ -285,9 +336,16 @@ export const Description = styled.div`
   font-size: 18px;
   color: #f5f5f5;
 
+  @media screen and (min-width: 700px) {
+    padding-bottom: 150px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 425px;
     margin: 150px 0 0 100px;
+    padding-bottom: 100px;
     font-size: 24px;
     line-height: 28px;
   }
@@ -306,6 +364,11 @@ export const ArrowUp = styled.button`
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+
+  @media screen and (min-width: 700px) {
+    width: 80px;
+    height: 80px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 100px;
