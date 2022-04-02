@@ -12,14 +12,11 @@ import VkIcon from '../../assets/icons/vk.svg';
 import TgIconHover from '../../assets/icons/tg-hover.svg';
 import InIconHover from '../../assets/icons/in-hover.svg';
 import VkIconHover from '../../assets/icons/vk-hover.svg';
-import TgIconActive from '../../assets/icons/tg-active.svg';
-import InIconActive from '../../assets/icons/in-active.svg';
-import VkIconActive from '../../assets/icons/vk-active.svg';
 
 import ArrowBytton from '../../assets/icons/arrow-up.svg';
 
-import BackgroundMobile from '../../assets/images/main-background-mobile.svg';
-import BackgroundDesktop from '../../assets/images/main-background-desktop.svg';
+import BackgroundMobile from '../../assets/images/main-background-mobile.png';
+import BackgroundDesktop from '../../assets/images/main-background-desktop.png';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -34,7 +31,7 @@ export const MenuGlobalStyle = createGlobalStyle`
 `;
 
 export const HeaderLayout = styled.div`
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     display: flex;
     width: 100%;
   }
@@ -63,16 +60,16 @@ export const MenuOpen = styled.button`
   background-size: cover;
   cursor: pointer;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
+    top: 60px;
     width: 80px;
     height: 80px;
-    top: 60px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
+    top: 80px;
     width: 101px;
     height: 101px;
-    top: 80px;
   }
 `;
 
@@ -102,13 +99,13 @@ export const MenuClose = styled.button`
   transition: all 0.2s;
   cursor: pointer;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 80px;
     height: 80px;
     margin-top: 60px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     width: 101px;
     height: 101px;
     margin-top: 80px;
@@ -126,7 +123,7 @@ export const MenuContent = styled.div`
   border-top: 3px solid #d5d5d5;
   border-bottom: 3px solid #d5d5d5;
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     width: calc(100% - 272px);
     height: 54%;
     margin-top: 51px;
@@ -150,11 +147,11 @@ export const MenuArtist = styled.a`
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     font-size: 28px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     font-size: 36px;
   }
 `;
@@ -178,14 +175,14 @@ export const MenuContacts = styled.a`
     background-image: url(${ContactsActive});
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 245px;
     height: 31px;
     margin-top: 61px;
     background-size: 224px 31px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     width: 265px;
     height: 41px;
     margin-top: 81px;
@@ -199,11 +196,11 @@ export const Title = styled.h1`
   font-size: 64px;
   color: #000000;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     font-size: 104px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     font-size: 144px;
   }
 `;
@@ -216,11 +213,11 @@ export const Subtitle = styled.h2`
   text-align: center;
   color: #131313;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     font-size: 32px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     font-size: 48px;
   }
 `;
@@ -245,7 +242,7 @@ export const Description = styled.p`
     margin-bottom: 15px;
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 400px;
     font-size: 18px;
     line-height: 22px;
@@ -255,7 +252,7 @@ export const Description = styled.p`
     }
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     width: 565px;
     font-size: 24px;
     line-height: 28px;
@@ -266,13 +263,13 @@ export const Description = styled.p`
   }
 `;
 
-export const ArtistsLayout = styled.div`
+export const ArtistsLayout = styled.main`
   padding: 0 15px 30px;
   background-image: url(${BackgroundMobile});
   background-position: center;
   background-repeat: repeat-y;
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     width: 1200px;
     padding: 0;
     margin: 0 auto;
@@ -316,13 +313,13 @@ export const Artist = styled.div`
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 640px;
     height: 300px;
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     align-items: flex-end;
     width: 453px;
     height: 226px;
@@ -360,21 +357,21 @@ export const Artist = styled.div`
 
     &:nth-child(1),
     &:nth-child(4) {
-      padding: 266px 0 0 344px;
+      padding: 266px 0 0 374px;
     }
 
     &:nth-child(2),
     &:nth-child(5) {
-      padding: 40px 0 0 75px;
+      padding: 40px 0 0 126px;
     }
 
     &:nth-child(3),
     &:nth-child(6) {
-      padding: 120px 0 0 614px;
+      padding: 120px 0 0 620px;
     }
 
     &:nth-child(7) {
-      padding: 0 0 264px 75px;
+      padding: 0 0 264px 126px;
     }
   }
 `;
@@ -387,14 +384,14 @@ export const Art = styled.div<{ src: string }>`
   background-size: 130px;
   cursor: pointer;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 300px;
     height: 300px;
     background-repeat: repeat;
   }
 
-  @media screen and (min-width: 1250px) {
-    width: 240px;
+  @media screen and (min-width: 1366px) {
+    width: 206px;
     height: 226px;
     background-size: cover;
   }
@@ -406,11 +403,11 @@ export const ArtistDescription = styled.div`
   justify-content: space-between;
   align-items: flex-end;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     justify-content: space-evenly;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     height: 60%;
     margin-bottom: 35px;
     justify-content: space-between;
@@ -428,19 +425,20 @@ export const ArtistName = styled.a`
     color: #fbec5d;
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     font-size: 18px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     width: 165px;
+    padding-right: 15px;
   }
 `;
 
 export const CreatorsLayout = styled.div`
   background-color: #131313;
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -463,7 +461,7 @@ export const Creator = styled.div`
     height: 134px;
     text-transform: none;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
       height: 170px;
     }
   }
@@ -475,11 +473,11 @@ export const CreatorName = styled.p`
   font-size: 24px;
   letter-spacing: 0.1em;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     font-size: 28px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     font-size: 36px;
   }
 `;
@@ -489,11 +487,11 @@ export const CreatorJob = styled.p`
   font-size: 18px;
   font-weight: 700;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     font-size: 20px;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     font-size: 24px;
   }
 `;
@@ -503,7 +501,7 @@ export const CreatorLinks = styled.div`
   font-size: 18px;
   letter-spacing: 0.1em;
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     font-size: 20px;
   }
 `;
@@ -514,35 +512,29 @@ export const CreatorLink = styled.a`
   padding-left: 90px;
   margin-bottom: 30px;
   background-repeat: no-repeat;
-  background-position: 15px;
+  background-position: 15px center;
   font-weight: 400;
   line-height: 24px;
-  transition: all 0.2s;
   cursor: pointer;
 
   &:nth-child(1) {
     background-image: url(${TgIcon});
     background-size: 39px 24px;
 
-    &:hover {
-      background-image: url(${TgIconHover});
-    }
-
+    &:hover,
     &:active {
-      background-image: url(${TgIconActive});
+      background-image: url(${TgIconHover});
     }
   }
 
   &:nth-child(2) {
     background-image: url(${InIcon});
     background-size: 30px 26px;
+    background-position: 20px center;
 
-    &:hover {
-      background-image: url(${InIconHover});
-    }
-
+    &:hover,
     &:active {
-      background-image: url(${InIconActive});
+      background-image: url(${InIconHover});
     }
   }
 
@@ -550,18 +542,15 @@ export const CreatorLink = styled.a`
     background-image: url(${VkIcon});
     background-size: 45px 22px;
 
-    &:hover {
-      background-image: url(${VkIconHover});
-    }
-
+    &:hover,
     &:active {
-      background-image: url(${VkIconActive});
+      background-image: url(${VkIconHover});
     }
   }
 `;
 
-export const FooterLayout = styled.div`
-  @media screen and (min-width: 1250px) {
+export const Footer = styled.footer`
+  @media screen and (min-width: 1366px) {
     position: relative;
   }
 `;
@@ -571,7 +560,7 @@ export const ArrowWrapper = styled.div`
   justify-content: center;
   padding: 35px 0;
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     position: absolute;
     bottom: 452px;
   }
@@ -583,15 +572,15 @@ export const Arrow = styled.button`
   height: 48px;
   background-image: url(${ArrowBytton});
   background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 80px;
     height: 80px;
-    background-size: cover;
   }
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 1366px) {
     width: 101px;
     height: 101px;
   }

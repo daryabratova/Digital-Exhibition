@@ -19,54 +19,50 @@ export default function Page() {
   return (
     <>
       <Styles.GlobalStyle />
-      <header>
-        <Styles.ArtistLayout>
-          <Styles.Artist>
-            <Link href="../">
-              <Styles.LinkMain />
-            </Link>
-            <Styles.ArtistPagination>
-              {artists.map((artist) => {
-                return (
-                  <Link
-                    href={{ pathname: '/artists/[artistId]', query: { artistId: artist.id } }}
-                    passHref
-                    key={artist.id}
-                  >
-                    <Styles.PaginationCircle filledCircle={artist.id === currentArtist.id} />
-                  </Link>
-                );
-              })}
-            </Styles.ArtistPagination>
-            <Styles.ArtistInfo>
-              <Styles.ArtistName>{currentArtist.name}</Styles.ArtistName>
-              <Styles.ArtistLinks>
-                <Styles.ArtistLink>{currentArtist.tg}</Styles.ArtistLink>
-                <Styles.ArtistLink>{currentArtist.in}</Styles.ArtistLink>
-                <Styles.ArtistLink>{currentArtist.vk}</Styles.ArtistLink>
-              </Styles.ArtistLinks>
-            </Styles.ArtistInfo>
-          </Styles.Artist>
-          <Styles.Decoration />
-        </Styles.ArtistLayout>
-      </header>
+      <Styles.ArtistLayout>
+        <Styles.Artist>
+          <Link href="../">
+            <Styles.LinkMain />
+          </Link>
+          <Styles.ArtistPagination>
+            {artists.map((artist) => {
+              return (
+                <Link
+                  href={{ pathname: '/artists/[artistId]', query: { artistId: artist.id } }}
+                  passHref
+                  key={artist.id}
+                >
+                  <Styles.PaginationCircle filledCircle={artist.id === currentArtist.id} />
+                </Link>
+              );
+            })}
+          </Styles.ArtistPagination>
+          <Styles.ArtistInfo>
+            <Styles.ArtistName>{currentArtist.name}</Styles.ArtistName>
+            <Styles.ArtistLinks>
+              <Styles.ArtistLink>{currentArtist.tg}</Styles.ArtistLink>
+              <Styles.ArtistLink>{currentArtist.in}</Styles.ArtistLink>
+              <Styles.ArtistLink>{currentArtist.vk}</Styles.ArtistLink>
+            </Styles.ArtistLinks>
+          </Styles.ArtistInfo>
+        </Styles.Artist>
+        <Styles.Decoration />
+      </Styles.ArtistLayout>
 
-      <main>
-        <Styles.PicturesLayout>
-          {pictures.map((picture) => {
-            return (
-              <Styles.ArtLayout key={picture}>
-                <div>
-                  <Styles.Title>{currentArtist.title}</Styles.Title>
-                  <Styles.Picture />
-                </div>
-                <Styles.Description>{currentArtist.description} </Styles.Description>
-              </Styles.ArtLayout>
-            );
-          })}
-          <Styles.ArrowUp onClick={handleScrollToTop} />
-        </Styles.PicturesLayout>
-      </main>
+      <Styles.PicturesLayout>
+        {pictures.map((picture) => {
+          return (
+            <Styles.ArtLayout key={picture}>
+              <div>
+                <Styles.Title>{currentArtist.title}</Styles.Title>
+                <Styles.Picture />
+              </div>
+              <Styles.Description>{currentArtist.description} </Styles.Description>
+            </Styles.ArtLayout>
+          );
+        })}
+        <Styles.ArrowUp onClick={handleScrollToTop} />
+      </Styles.PicturesLayout>
     </>
   );
 }

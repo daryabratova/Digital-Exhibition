@@ -11,16 +11,13 @@ import VkIcon from '../../assets/icons/vk.svg';
 import TgIconHover from '../../assets/icons/tg-hover.svg';
 import InIconHover from '../../assets/icons/in-hover.svg';
 import VkIconHover from '../../assets/icons/vk-hover.svg';
-import TgIconActive from '../../assets/icons/tg-active.svg';
-import InIconActive from '../../assets/icons/in-active.svg';
-import VkIconActive from '../../assets/icons/vk-active.svg';
 
 import Arrow from '../../assets/icons/arrow-up.svg';
 
 import DecorationMobile from '../../assets/images/artist-decoration-mobile.png';
 import DecorationDesktop from '../../assets/images/artist-decoration-desktop.png';
-import BackgroundMobile from '../../assets/images/artist-main-mobile.svg';
-import BackgroundDesktop from '../../assets/images/artist-main-desktop.svg';
+import BackgroundMobile from '../../assets/images/artist-main-mobile.png';
+import BackgroundDesktop from '../../assets/images/artist-main-desktop.png';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -28,36 +25,36 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const ArtistLayout = styled.div`
+export const ArtistLayout = styled.header`
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: calc(100vh - 116px);
+  padding-bottom: 116px;
   background-color: #131313;
+
+  @media screen and (min-width: 768px) {
+    min-height: calc(80vh - 127px);
+    padding-bottom: 127px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    min-height: calc(90vh - 127px);
+    padding-bottom: 127px;
+  }
 `;
 
 export const Artist = styled.div`
   width: 250px;
   margin: 25px 0;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 640px;
     padding: 60px 0 0;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 680px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url(${BackgroundDesktop});
-      background-repeat: repeat-y;
-      background-position: center;
-    }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     width: 1100px;
     height: 520px;
     margin: 0;
@@ -84,13 +81,13 @@ export const ArtistPagination = styled.div`
   height: 23px;
   margin: 60px auto 0;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 245px;
     height: 40px;
     margin: -30px auto 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     width: 355px;
     height: 40px;
     margin: -25px auto 0;
@@ -111,13 +108,13 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
     background-image: url(${FilledCircle});
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 30px;
     height: 30px;
     background-size: 28px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     width: 40px;
     height: 40px;
     margin-right: 12px;
@@ -126,7 +123,7 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
 `;
 
 export const ArtistInfo = styled.div`
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -138,29 +135,29 @@ export const ArtistName = styled.div`
   width: 250px;
   margin-top: 94px;
   font-family: Black Acute, serif;
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #f5f5f5;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     margin-top: 38px;
-    font-size: 38px;
-    line-height: 48px;
+    font-size: 35px;
+    line-height: 46px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     width: 774px;
     margin-top: 0;
-    font-size: 72px;
-    line-height: 84px;
+    font-size: 68px;
+    line-height: 78px;
   }
 `;
 
 export const ArtistLinks = styled.div`
   margin-top: 41px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     margin-top: 0;
   }
 `;
@@ -178,27 +175,21 @@ export const ArtistLink = styled.a`
   line-height: 25px;
   letter-spacing: 0.1em;
   color: #f5f5f5;
-  transition: all 0.2s;
   cursor: pointer;
 
-  &:hover {
-    background-image: url(${TgIconHover});
-  }
-
+  &:hover,
   &:active {
-    background-image: url(${TgIconActive});
+    background-image: url(${TgIconHover});
   }
 
   &:nth-child(2) {
     background-image: url(${InstIcon});
     background-size: 28px 23px;
+    background-position: 5px;
 
-    &:hover {
-      background-image: url(${InIconHover});
-    }
-
+    &:hover,
     &:active {
-      background-image: url(${InIconActive});
+      background-image: url(${InIconHover});
     }
   }
 
@@ -206,38 +197,9 @@ export const ArtistLink = styled.a`
     background-image: url(${VkIcon});
     background-size: 47px 24px;
 
-    &:hover {
-      background-image: url(${VkIconHover});
-    }
-
+    &:hover,
     &:active {
-      background-image: url(${VkIconActive});
-    }
-  }
-
-  @media screen and (min-width: 700px) {
-    &:nth-child(2) {
-      background-size: 32px 25px;
-    }
-
-    &:nth-child(3) {
-      background-size: 42px 30px;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    height: 30px;
-    margin-bottom: 40px;
-    background-size: 50px 45px;
-    font-size: 20px;
-    line-height: 28px;
-
-    &:nth-child(2) {
-      background-size: 40px 35px;
-    }
-
-    &:nth-child(3) {
-      background-size: 50px 45px;
+      background-image: url(${VkIconHover});
     }
   }
 `;
@@ -251,20 +213,20 @@ export const Decoration = styled.div`
   background-image: url(${DecorationMobile});
   background-repeat: repeat-x;
 
-  @media screen and (min-width: 700px) {
-    bottom: 220px;
+  @media screen and (min-width: 768px) {
+    bottom: 0;
     height: 127px;
     background-image: url(${DecorationDesktop});
   }
 
-  @media screen and (min-width: 1200px) {
-    bottom: 150px;
+  @media screen and (min-width: 1366px) {
+    bottom: 0;
     height: 127px;
     background-image: url(${DecorationDesktop});
   }
 `;
 
-export const PicturesLayout = styled.div`
+export const PicturesLayout = styled.main`
   position: relative;
   width: 100%;
   background-color: #131313;
@@ -272,11 +234,12 @@ export const PicturesLayout = styled.div`
   background-position: center;
   background-repeat: repeat-y;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
+    padding-top: 300px;
     background-image: url(${BackgroundDesktop});
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     background-image: url(${BackgroundDesktop});
   }
 `;
@@ -289,7 +252,7 @@ export const Title = styled.div`
   text-transform: uppercase;
   color: #f5f5f5;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 345px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -297,7 +260,7 @@ export const Title = styled.div`
     line-height: 36px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     width: 333px;
     margin: 0;
     margin-bottom: 30px;
@@ -307,10 +270,11 @@ export const Title = styled.div`
 `;
 
 export const ArtLayout = styled.div`
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     display: flex;
     width: 1000px;
     padding-bottom: 300px;
+    padding-left: 57px;
     margin: 0 auto;
   }
 `;
@@ -321,10 +285,10 @@ export const Picture = styled.div`
   margin: 26px auto 0;
   background-color: #e6e6e6;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     display: inline-block;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     margin: 0;
   }
 `;
@@ -336,15 +300,15 @@ export const Description = styled.div`
   font-size: 18px;
   color: #f5f5f5;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     padding-bottom: 150px;
     font-size: 20px;
     line-height: 24px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     width: 425px;
-    margin: 150px 0 0 100px;
+    margin: 150px 0 0 60px;
     padding-bottom: 100px;
     font-size: 24px;
     line-height: 28px;
@@ -365,12 +329,12 @@ export const ArrowUp = styled.button`
   background-size: cover;
   cursor: pointer;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     width: 80px;
     height: 80px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1366px) {
     width: 100px;
     height: 100px;
   }
