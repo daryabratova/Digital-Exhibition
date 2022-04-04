@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Digital Exhibition</title>
         <meta
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
           </Styles.ArrowWrapper>
         </Styles.CreatorsLayout>
       </Styles.Footer>
-    </div>
+    </>
   );
 };
 

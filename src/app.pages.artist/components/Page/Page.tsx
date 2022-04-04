@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { artists } from '../../../data';
@@ -18,6 +19,12 @@ export default function Page() {
 
   return (
     <>
+      <Head>
+        <title>{currentArtist.name}</title>
+        <meta name="description" content="Web page of artist's works and information about them" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Styles.GlobalStyle />
       <Styles.ArtistLayout>
         <Styles.Artist>
