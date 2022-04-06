@@ -57,19 +57,19 @@ const Home: React.FC = () => {
           </Styles.TitleLayout>
           <Styles.DescriptionLayout>
             <Styles.Description>
-              Триггер (триггерная система) — класс электронных устройств, обладающих способностью
-              длительно находиться в одном из двух устойчивых состояний и чередовать их под
-              воздействием внешних сигналов. Каждое состояние триггера легко распознаётся по
-              значению выходного напряжения. По характеру действия триггеры относятся к импульсным
-              устройствам — их активные элементы (транзисторы, лампы) работают в ключевом режиме, а
-              смена состояний длится очень короткое время.
+              A trigger (trigger system) is a class of electronic devices that have the ability to
+              stay in one of two stable states for a long time and alternate them under the
+              influence of external signals. Each trigger state is easily recognized by the value of
+              the output voltage. By the nature of the action, triggers belong to pulse devices —
+              their active elements (transistors, lamps) operate in the key mode, and the change of
+              states lasts a very short time.
             </Styles.Description>
             <Styles.Description>
-              Отличительной особенностью триггера как функционального устройства является свойство
-              запоминания двоичной информации. Под памятью триггера подразумевают способность
-              оставаться в одном из двух состояний и после прекращения действия переключающего
-              сигнала. Приняв одно из состояний за «1», а другое за «0», можно считать, что триггер
-              хранит (помнит) один разряд числа, записанного в двоичном коде.
+              A distinctive feature of the trigger as a functional device is the property of storing
+              binary information. Trigger memory refers to the ability to remain in one of two
+              states even after the termination of the switching signal. Taking one of the states as
+              «1» and the other as «0», we can assume that the trigger stores (remembers) one digit
+              of a number written in binary code.
             </Styles.Description>
           </Styles.DescriptionLayout>
         </Styles.HeaderLayout>

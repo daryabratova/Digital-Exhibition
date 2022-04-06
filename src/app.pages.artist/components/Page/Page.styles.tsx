@@ -245,7 +245,9 @@ export const PicturesLayout = styled.main`
 `;
 
 export const Title = styled.div`
-  padding: 36px 0 0 13px;
+  width: 335px;
+  margin: 0 auto;
+  padding-top: 36px;
   font-family: Black Acute, serif;
   font-size: 24px;
   letter-spacing: 0.1em;
@@ -253,8 +255,6 @@ export const Title = styled.div`
   color: #f5f5f5;
 
   @media screen and (min-width: 768px) {
-    width: 345px;
-    margin: 0 auto;
     margin-bottom: 30px;
     font-size: 28px;
     line-height: 36px;
@@ -262,6 +262,7 @@ export const Title = styled.div`
 
   @media screen and (min-width: 1366px) {
     width: 333px;
+    padding-right: 10px;
     margin: 0;
     margin-bottom: 30px;
     font-size: 36px;
@@ -310,7 +311,7 @@ export const Description = styled.div`
     width: 425px;
     margin: 150px 0 0 60px;
     padding-bottom: 100px;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
   }
 `;

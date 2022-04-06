@@ -4,7 +4,6 @@ import MenuOpenIcon from '../../assets/icons/menu-open.svg';
 import MenuCloseIcon from '../../assets/icons/menu-close.svg';
 import Contacts from '../../assets/icons/contacts.svg';
 import ContactsHover from '../../assets/icons/contacts-hover.svg';
-import ContactsActive from '../../assets/icons/contacts-active.svg';
 
 import TgIcon from '../../assets/icons/tg.svg';
 import InIcon from '../../assets/icons/in.svg';
@@ -164,15 +163,11 @@ export const MenuContacts = styled.a`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 180px 30px;
-  transition: all 0.2s;
   cursor: pointer;
 
-  &:hover {
-    background-image: url(${ContactsHover});
-  }
-
+  &:hover,
   &:active {
-    background-image: url(${ContactsActive});
+    background-image: url(${ContactsHover});
   }
 
   @media screen and (min-width: 768px) {
@@ -218,7 +213,7 @@ export const Subtitle = styled.h2`
   }
 
   @media screen and (min-width: 1366px) {
-    font-size: 48px;
+    font-size: 42px;
   }
 `;
 
@@ -254,7 +249,7 @@ export const Description = styled.p`
 
   @media screen and (min-width: 1366px) {
     width: 565px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
 
     &:first-child {
@@ -492,7 +487,7 @@ export const CreatorJob = styled.p`
   }
 
   @media screen and (min-width: 1366px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
@@ -509,7 +504,7 @@ export const CreatorLinks = styled.div`
 export const CreatorLink = styled.a`
   box-sizing: border-box;
   width: 100%;
-  padding-left: 90px;
+  padding-left: 80px;
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: 15px center;
