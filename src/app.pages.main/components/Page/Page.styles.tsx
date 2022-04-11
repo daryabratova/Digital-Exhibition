@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import * as animations from './glitch-styles';
 
 import MenuOpenIcon from '../../assets/icons/menu-open.svg';
 import MenuCloseIcon from '../../assets/icons/menu-close.svg';
@@ -74,7 +75,7 @@ export const MenuOpen = styled.button`
 
 export const Menu = styled.div`
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   left: 0;
   top: 0;
   display: flex;
@@ -185,14 +186,58 @@ export const MenuContacts = styled.a`
   }
 `;
 
+export const TitleWrapper = styled.div`
+  h1 {
+    span {
+      animation: ${animations.paths} 5s step-end infinite;
+    }
+
+    &::before {
+      animation: ${animations.paths} 5s step-end infinite,
+        ${animations.opacity} 5s step-end infinite, ${animations.font} 8s step-end infinite,
+        ${animations.movement} 10s step-end infinite;
+    }
+
+    &::after {
+      animation: ${animations.paths} 5s step-end infinite,
+        ${animations.opacity} 5s step-end infinite, ${animations.font} 7s step-end infinite,
+        ${animations.movement} 8s step-end infinite;
+    }
+  }
+`;
+
 export const Title = styled.h1`
+  position: relative;
+  z-index: 2;
   margin: 0 0 27px;
+  font-size: 52px;
+  letter-spacing: 10px;
   text-transform: uppercase;
-  font-size: 64px;
-  color: #000000;
+  color: #131313;
+  filter: drop-shadow(0 1px 2px);
 
   @media screen and (min-width: 768px) {
     font-size: 104px;
+
+    &::before,
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      width: 110%;
+      z-index: -1;
+    }
+
+    &::before {
+      top: 10px;
+      left: 15px;
+      color: #ebdd61c0;
+    }
+
+    &::after {
+      top: 5px;
+      left: -10px;
+      color: #d5d5d5;
+    }
   }
 
   @media screen and (min-width: 1366px) {
@@ -203,7 +248,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.h2`
   margin: 0;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0.25em;
   text-align: center;
   color: #131313;

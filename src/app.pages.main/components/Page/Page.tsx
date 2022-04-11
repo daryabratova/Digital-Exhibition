@@ -50,10 +50,12 @@ const Home: React.FC = () => {
         <Styles.MenuOpen onClick={() => setMenuIsOpen(true)} />
         <Styles.HeaderLayout>
           <Styles.TitleLayout>
-            <div>
-              <Styles.Title>Trigger</Styles.Title>
+            <Styles.TitleWrapper>
+              <Styles.Title data-text="TRIGGER">
+                <span>TRIGGER</span>
+              </Styles.Title>
               <Styles.Subtitle>[Make it flow]</Styles.Subtitle>
-            </div>
+            </Styles.TitleWrapper>
           </Styles.TitleLayout>
           <Styles.DescriptionLayout>
             <Styles.Description>
