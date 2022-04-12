@@ -559,7 +559,7 @@ export const CreatorLink = styled.a`
 
   &:nth-child(1) {
     background-image: url(${TgIcon});
-    background-size: 39px 24px;
+    background-size: 29px 18px;
 
     &:hover,
     &:active {
@@ -569,8 +569,8 @@ export const CreatorLink = styled.a`
 
   &:nth-child(2) {
     background-image: url(${InIcon});
-    background-size: 30px 26px;
-    background-position: 20px center;
+    background-size: 28px 18px;
+    background-position: 15px center;
 
     &:hover,
     &:active {
@@ -580,11 +580,26 @@ export const CreatorLink = styled.a`
 
   &:nth-child(3) {
     background-image: url(${VkIcon});
-    background-size: 45px 22px;
+    background-size: 32px 18px;
 
     &:hover,
     &:active {
       background-image: url(${VkIconHover});
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &:nth-child(1) {
+      background-size: 39px 24px;
+    }
+
+    &:nth-child(2) {
+      background-size: 30px 26px;
+      background-position: 20px center;
+    }
+
+    &:nth-child(3) {
+      background-size: 45px 22px;
     }
   }
 `;

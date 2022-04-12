@@ -102,16 +102,25 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
   background-size: 23px;
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 0.1s;
+  transition: all 0.2s;
 
   &:hover {
     background-image: url(${FilledCircle});
+  }
+
+  &:active {
+    background-image: url(${FilledCircle});
+    background-size: 15px;
   }
 
   @media screen and (min-width: 768px) {
     width: 30px;
     height: 30px;
     background-size: 28px;
+
+    &:active {
+      background-size: 18px;
+    }
   }
 
   @media screen and (min-width: 1366px) {
@@ -119,6 +128,10 @@ export const PaginationCircle = styled.a<{ filledCircle: boolean }>`
     height: 40px;
     margin-right: 12px;
     background-size: 38px;
+
+    &:active {
+      background-size: 20px;
+    }
   }
 `;
 
@@ -165,27 +178,29 @@ export const ArtistLinks = styled.div`
 export const ArtistLink = styled.a`
   display: block;
   height: 25px;
-  padding-left: 72px;
+  padding-left: 62px;
   margin-bottom: 27px;
-  background-image: url(${TgIcon});
   background-repeat: no-repeat;
   background-position: left;
-  background-size: 39px 24px;
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 0.1em;
   color: #f5f5f5;
   cursor: pointer;
 
-  &:hover,
-  &:active {
-    background-image: url(${TgIconHover});
+  &:nth-child(1) {
+    background-image: url(${TgIcon});
+    background-size: 29px 18px;
+
+    &:hover,
+    &:active {
+      background-image: url(${TgIconHover});
+    }
   }
 
   &:nth-child(2) {
     background-image: url(${InstIcon});
-    background-size: 28px 23px;
-    background-position: 5px;
+    background-size: 28px 18px;
 
     &:hover,
     &:active {
@@ -195,11 +210,28 @@ export const ArtistLink = styled.a`
 
   &:nth-child(3) {
     background-image: url(${VkIcon});
-    background-size: 47px 24px;
+    background-size: 32px 18px;
 
     &:hover,
     &:active {
       background-image: url(${VkIconHover});
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 72px;
+
+    &:nth-child(1) {
+      background-size: 39px 24px;
+    }
+
+    &:nth-child(2) {
+      background-size: 28px 23px;
+      background-position: 5px;
+    }
+
+    &:nth-child(3) {
+      background-size: 42px 24px;
     }
   }
 `;
