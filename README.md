@@ -1,13 +1,18 @@
 # Digital Exhibition :framed_picture:
 
 Web page for posting artists' works and information about them
-### Technologies
+
+## Demo
+
+Online demo is available [here](https://digital-exhibition-three.vercel.app/).
+
+## Technologies
 
 - **TypeScript**
 - **React**
 - **Next.js**
 
-### Start the app
+## Start the app
 
 To get started, just clone the repository, cd to cloned directory and run yarn build && yarn start:
 
